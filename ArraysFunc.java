@@ -1,4 +1,4 @@
-public class array_1 {
+public class ArraysFunc {
 
     public Object[] reverseArray(Object[] array) {
         Object[] reversed = new Object[array.length];
