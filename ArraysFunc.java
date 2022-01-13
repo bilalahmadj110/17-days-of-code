@@ -8,17 +8,41 @@ public class ArraysFunc {
         return reversed;
     }
 
-    public static void main(String[] args) {
-        Object[] array = new Object[5];
-        array[0] = "a";
-        array[1] = "b";
-        array[2] = "c";
-        array[3] = "d";
-        array[4] = "e";
-        array_1 reverse = new array_1();
-        Object[] reversed = reverse.reverseArray(array);
-        for (int index = 0; index < reversed.length; index++) {
-            System.out.println(reversed[index]);
+    public int[] maxMin(int array[]) {
+        int min = array[0];
+        int max = array[0];
+        for (int item: array) {
+            if (item < min) {
+                min = item;
+            }
+            if (item > max) {
+                max = item;
+            }
         }
+        return new int[]{max, min};
+    }
+
+    public static void main(String[] args) {
+        ArraysFunc maxMin = new ArraysFunc();
+        // 1.
+        // Object[] array = new Object[5];
+        // array[0] = "a";
+        // array[1] = "b";
+        // array[2] = "c";
+        // array[3] = "d";
+        // array[4] = "e";
+        // Object[] reversed = maxMin.reverseArray(array);
+        // for (int index = 0; index < reversed.length; index++) {
+        //     System.out.println(reversed[index]);
+        // }
+
+        // 2.
+        // test maxMin
+        // int[] array = new int[]{1, 34, 54, 6, 23, 54, 7, 34, 34, 5, 35};
+        // int[] maxMinResult = maxMin.maxMin(array);
+        // System.out.println(maxMinResult[0]);
+        // System.out.println(maxMinResult[1]);
+
+        // 3.
     }
 }
